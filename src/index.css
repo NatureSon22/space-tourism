@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Barlow+Condensed:wght@400;500;700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&family=Carme&family=Cinzel:wght@700&family=Concert+One&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,900&family=Erica+One&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Halant:wght@700&family=Happy+Monkey&family=Montserrat+Subrayada&family=Montserrat:wght@300;400;600;800&family=MuseoModerno:wght@900&family=Nerko+One&family=Noto+Sans+JP:wght@900&family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&family=Open+Sans:wght@600;700;800&family=Orbitron:wght@600&family=Oswald:wght@400;600&family=PT+Sans&family=Play:wght@700&family=Playfair+Display:wght@900&family=Roboto+Slab:wght@300&family=Rubik+Mono+One&family=Russo+One&family=Space+Mono:wght@700&family=Suez+One&family=Ubuntu:wght@700&family=Varela+Round&family=Work+Sans:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .container {
+        @apply w-[90%] max-w-[1400px];
+    }
+
+    .link-chosen::after {
+        @apply content-[''] h-1 w-0 bg-neutral absolute -bottom-[2.4em] left-0 rounded-full transition-all duration-500
+    }
+
+    .side::after {
+        @apply -bottom-[1em]
+    }
+
+    .link-chosen:hover::after {
+        @apply w-full;
+    }
+
+    .link-chosen::after.selected {
+        @apply w-full bg-white
+    }
+
+    .link-gap::after {
+        @apply -bottom-[0.8em]
+    }
+
+    .link-technology:hover {
+        @apply bg-neutral-100 border-none transition-all duration-300
+    }
+
+    .link-technology.selected {
+        @apply bg-white text-black
+    }
+
+    .link-explore::before {
+        @apply content-[''] w-full h-full rounded-full bg-white/50 absolute -z-10
+    }
+
+    .link-explore:hover:before {
+        @apply scale-150
+    }
+
+    .page-header {
+        @apply uppercase text-white font-barlow-condensed tracking-widest text-lg
+    }
+
+    .custom-backdrop {
+        @apply bg-white/10 shadow-shadow-custom backdrop-blur-md;
+    }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    
+}
